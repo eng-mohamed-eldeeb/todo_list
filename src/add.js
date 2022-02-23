@@ -5,7 +5,7 @@ export default function add(counter, todo, bool) {
     const li = {
         description: todo,
         completed: bool,
-        index: counter
+        index: counter +1
     };
     counter += 1;
     todoList.push(li);
