@@ -1,29 +1,27 @@
 import './style.css';
-
+import remove from './remove.js'
+import add from './add.js';
+import show from './show.js'
+var counter = 0;
 const todoUL = document.querySelector('#todoUl');
-const todoList = [
-  {
-    description: 'Go to work',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Go to the supermarket',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Eat',
-    completed: false,
-    index: 2,
-  },
-];
+const todo = document.querySelector('.AddToList');
+const form = document.getElementById('todoForm');
+let todoList = [];
 
-const todoLiCreation = (ul, list) => {
-  list.forEach((e) => {
-    const todoLi = `<li id='${e.index}'><input class="${e.completed}" type="checkbox"><p>${e.description}</p></li>`;
-    ul.innerHTML += todoLi;
-  });
-};
+export default todoList;
 
-todoLiCreation(todoUL, todoList);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  counter = add(counter, todo.value, false);
+  show(todoUL)
+  todo.value = '';
+  console.log(todoList);
+})
+
+todoUL.addEventListener('click', (e) => {
+  if (e.target.className.includes('delete')){
+    todoList = remove(e.target.parentNode.className);
+    show(todoUL);
+    console.log(todoList)
+}
+})
