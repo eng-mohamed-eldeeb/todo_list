@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(235, 235, 235);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 40vw;
+  border-radius: 13px;
+  margin: 12% auto;
+  transition: all 0.4s;
+}
+
+.hero:hover {
+  box-shadow: 6px 6px 10px rgb(192, 219, 245);
+}
+
+.todoHead {
+  width: auto;
+  padding: 27px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.head {
+  padding: 0 27px 10px 27px;
+  width: auto;
+  min-width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.AddToList {
+  padding: 29px;
+  width: auto;
+  margin-top: 10px;
+  min-width: 90%;
+  border: 0;
+  font-size: 1.5rem;
+}
+
+#todoUl {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 30px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#todoUl li {
+  background-color: rgb(240, 239, 239);
+  color: #131313;
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 86%;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+#todoUl li:hover {
+  background-color: rgb(231, 241, 253);
+  box-shadow: 6px 6px 10px rgb(192, 219, 245);
+}
+
+#todoUl li input {
+  width: 27px;
+  height: 27px;
+  margin-right: 12px;
+}
+
+.clearSpan {
+  width: 100%;
+  font-size: 1.6rem;
+  background-color: rgb(214, 214, 214);
+  color: rgb(44, 46, 49);
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  border-radius: 0 0 13px 13px;
+}
