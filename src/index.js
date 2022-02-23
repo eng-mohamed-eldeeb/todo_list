@@ -1,15 +1,31 @@
 import _ from 'lodash';
 import './style.css';
 
- function component() {
-   const element = document.createElement('div');
+const todoUL = document.querySelector('#todoUl');
+const todoList = [
+  {
+    description: 'Go to work',
+    completed: false,
+    index: 0
+  },
+  {
+    description: 'Go to the supermarket',
+    completed: false,
+    index: 1
+  },
+  {
+    description: 'Eat',
+    completed: false,
+    index: 2
+  }
+];
 
-  // Lodash, currently included via a script, is required for this line to work
-  // Lodash, now imported by this script
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-   element.classList.add('hello');
 
-   return element;
- }
+const todoLiCreation = (ul , list) => {
+  list.forEach((e) => {
+    const todoLi = `<li id='${e.index}'><input class="${e.completed}" type="checkbox"><p>${e.description}</p></li>`
+    ul.innerHTML += todoLi;
+  });
+}
 
- document.body.appendChild(component());
+todoLiCreation(todoUL, todoList);

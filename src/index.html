@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>todo</title>
 </head>
 <body>
     
-    <script src="index.js"></script>
+    <section class="hero">
+        <div class="todoHead">
+            <div class="head">
+            <p>Today's To Do</p>
+            <i class="fa-solid fa-lg fa-recycle"></i>
+        </div>
+        <input class="AddToList" type="text" placeholder="Add to your list...">
+        </div>
+        <ul id="todoUl"></ul>
+        <span class="clearSpan"><p>Clear all completed</p></span>
+    </section>
 </body>
 </html>
