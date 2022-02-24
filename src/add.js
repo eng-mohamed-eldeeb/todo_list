@@ -1,7 +1,7 @@
 const todoUL = document.querySelector('#todoUl');
 todoUL.innerHTML = '';
 export default function add(counter, todo, bool) {
-  const todoListString = localStorage.getItem('todoList') || "[]";
+  const todoListString = localStorage.getItem('todoList') || '[]';
   const todoList = JSON.parse(todoListString);
   const li = {
     description: todo,
