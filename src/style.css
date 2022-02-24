@@ -73,6 +73,7 @@ body {
   align-items: center;
   border-radius: 8px;
   transition: all 0.3s;
+  position: relative;
 }
 
 .cont {
@@ -97,6 +98,21 @@ body {
   width: 27px;
   height: 27px;
   margin-right: 12px;
+}
+
+#editForm {
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
+  margin-left: -20px;
+}
+
+#editForm .newAddToList {
+  width: 100%;
+  /* height: 100%; */
+  padding: 27px 0 27px 27px;
+  font-size: 1.6rem;
+  border: 0px;
 }
 
 .clearSpan {
