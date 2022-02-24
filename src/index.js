@@ -7,8 +7,8 @@ const todoUL = document.querySelector('#todoUl');
 const todo = document.querySelector('.AddToList');
 const form = document.getElementById('todoForm');
 let todoList = [];
-
-export default todoList;
+show(todoUL);
+// export default todoList;
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();

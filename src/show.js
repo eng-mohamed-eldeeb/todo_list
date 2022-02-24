@@ -1,7 +1,10 @@
-import todoList from "./index.js";
+// import todoList from "./index.js";
 
 export default function show(ul) {
-    ul.innerHTML = ''
+const todoListString = localStorage.getItem("todoList");
+let todoList = JSON.parse(todoListString);
+if(todoList){
+  ul.innerHTML = "";
   for (let i = 0; i < todoList.length; i++) {
     // create element
     const todoLi = document.createElement("li");
@@ -23,4 +26,7 @@ export default function show(ul) {
     todoLi.innerHTML += delet;
     ul.appendChild(todoLi);
   }
+  const newTodoList = JSON.stringify(todoList);
+  localStorage.setItem("todoList", newTodoList);
+}
 }
