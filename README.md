@@ -38,7 +38,7 @@ Additional description about the project and its features.
 
 ## Authors
 
-👤 **MOHAMED EL DEEB** with **Walker**
+👤 **MOHAMED EL DEEB**
 
 - GitHub: [@githubhandle](https://github.com/eng-mohamed-eldeeb)
 - Twitter: [@twitterhandle](https://https://twitter.com/eldeeb_3o)
