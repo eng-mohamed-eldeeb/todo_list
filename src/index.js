@@ -10,8 +10,8 @@ const todoUL = document.querySelector('#todoUl');
 const todo = document.querySelector('.AddToList');
 const form = document.getElementById('todoForm');
 show(todoUL);
-// export default todoList;
 
+// export default todoList;
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   counter = add(counter, todo.value, false);
