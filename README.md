@@ -6,8 +6,7 @@
 > This web app is about making a book list
 
 > This site contans
->- An add form that adds the books
->- A remove button that is attached to each list item removs the book from the list
+>- An add form that adds the todos
 
 ![screenshot](./img/Screenshot.png)
 
@@ -16,7 +15,7 @@ Additional description about the project and its features.
 
 ## live demo
 
-- project: (https://eng-mohamed-eldeeb.github.io/BookList/)
+- project: (https://eng-mohamed-eldeeb.github.io/todo_list/)
 
 ## Install
 
@@ -39,7 +38,7 @@ Additional description about the project and its features.
 
 ## Authors
 
-👤 **MOHAMED EL DEEB** with **Walker**
+👤 **MOHAMED EL DEEB**
 
 - GitHub: [@githubhandle](https://github.com/eng-mohamed-eldeeb)
 - Twitter: [@twitterhandle](https://https://twitter.com/eldeeb_3o)

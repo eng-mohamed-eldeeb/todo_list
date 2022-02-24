@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <title>todo</title>
-<script defer src="main.js"></script></head>
-<body>
-    
+  <script defer src="main.js"></script></head>
+  <body>
     <section class="hero">
-        <div class="todoHead">
-            <div class="head">
-            <p>Today's To Do</p>
-            <i class="fa-solid fa-lg fa-recycle"></i>
+      <div class="todoHead">
+        <div class="head">
+          <p>Today's To Do</p>
+          <i class="fa-solid fa-lg fa-recycle"></i>
         </div>
-        <input class="AddToList" type="text" placeholder="Add to your list...">
-        </div>
-        <ul id="todoUl"></ul>
-        <span class="clearSpan">Clear all completed</span>
+        <form id="todoForm">
+          <input
+            class="AddToList"
+            type="text"
+            placeholder="Add to your list..."
+            value=""
+          />
+        </form>
+      </div>
+      <ul id="todoUl"></ul>
+      <span class="clearSpan">Clear all completed</span>
     </section>
-</body>
+  </body>
 </html>

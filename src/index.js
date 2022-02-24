@@ -1,29 +1,37 @@
 import './style.css';
+import remove from './remove.js';
+import add from './add.js';
+import show from './show.js';
+import viewInput from './viewInput.js';
+import edit from './edite.js';
 
+let counter = 0;
 const todoUL = document.querySelector('#todoUl');
-const todoList = [
-  {
-    description: 'Go to work',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Go to the supermarket',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Eat',
-    completed: false,
-    index: 2,
-  },
-];
+const todo = document.querySelector('.AddToList');
+const form = document.getElementById('todoForm');
+show(todoUL);
 
-const todoLiCreation = (ul, list) => {
-  list.forEach((e) => {
-    const todoLi = `<li id='${e.index}'><input class="${e.completed}" type="checkbox"><p>${e.description}</p></li>`;
-    ul.innerHTML += todoLi;
-  });
-};
+// export default todoList;
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  counter = add(counter, todo.value, false);
+  show(todoUL);
+  todo.value = '';
+});
 
-todoLiCreation(todoUL, todoList);
+todoUL.addEventListener('click', (e) => {
+  if (e.target.className.includes('delete')) {
+    remove(e.target.parentNode.className);
+    show(todoUL);
+  }
+  if (e.target.className.includes('edit')) {
+    viewInput(e.target.parentNode, e.target.parentNode.className);
+    const antherForm = document.getElementById('editForm');
+    antherForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = document.querySelector(('.newAddToList'));
+      edit(e.target.parentNode.className, val.value);
+      show(todoUL);
+    });
+  }
+});
