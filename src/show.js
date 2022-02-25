@@ -4,10 +4,8 @@ export default function show(ul) {
   if (todoList) {
     ul.innerHTML = '';
     for (let i = 0; i < todoList.length; i += 1) {
-      // create element
-
       for (let i = 0; i < todoList.length; i += 1) {
-        todoList[i].index = i;
+        todoList[i].id = i;
       }
       const todoLi = document.createElement('li');
       const dev = document.createElement('dev');
@@ -15,9 +13,14 @@ export default function show(ul) {
       const task = document.createElement('p');
       const delet = '<i id="delete" class="delete fa-solid fa-trash-can"></i>';
       const edit = '<i id="edit" class="edit fa-solid fa-pen-to-square"></i>';
-      // add attributes
-      todoLi.setAttribute('class', `${todoList[i].index}`);
+      // set attributes
+      todoLi.setAttribute('id', `${todoList[i].id}`);
+      todoLi.setAttribute('class', 'befor');
       input.setAttribute('type', 'checkbox');
+      console.log(todoList[i].completed);
+      if (todoList[i].completed) {
+        input.setAttribute('checked', true);
+      }
       input.setAttribute('class', `${todoList[i].completed}`);
       dev.setAttribute('class', 'cont');
       task.innerText = todoList[i].description;

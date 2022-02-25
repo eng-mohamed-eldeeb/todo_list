@@ -8,5 +8,4 @@ export default function remove(ind) {
   }
   const newTodoList = JSON.stringify(todoList);
   localStorage.setItem('todoList', newTodoList);
-  return todoList;
 }

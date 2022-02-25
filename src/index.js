@@ -4,6 +4,8 @@ import add from './add.js';
 import show from './show.js';
 import viewInput from './viewInput.js';
 import edit from './edite.js';
+import checkboxs from './check.js';
+import removeCecked from './remove_checked.js';
 
 let counter = 0;
 const todoUL = document.querySelector('#todoUl');
@@ -29,9 +31,24 @@ todoUL.addEventListener('click', (e) => {
     const antherForm = document.getElementById('editForm');
     antherForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const val = document.querySelector(('.newAddToList'));
+      const val = document.querySelector('.newAddToList');
       edit(e.target.parentNode.className, val.value);
       show(todoUL);
     });
   }
+  const inputs = document.querySelectorAll('.cont input');
+
+  inputs.forEach((input) => {
+    input.addEventListener('change', (e) => {
+      checkboxs(e.target.parentNode.parentNode.id, e.target.checked);
+    //  show(todoUL);
+    });
+  });
+});
+
+const span = document.querySelector('.clearSpan');
+
+span.addEventListener('click', () => {
+  removeCecked();
+  show(todoUL);
 });
